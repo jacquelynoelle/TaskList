@@ -1,9 +1,9 @@
 <main>
   <h2>Task Detail</h2>
   <article>
-    <h3><%= "#{@task[:name]}" %></h3>
-    <h4><%= "#{@task[:description]}" %></h4>
-    <h5><%= "Due: #{@task[:completion_date]}" %></h5>
+    <h3><%= "#{@task.name}" %></h3>
+    <h4><%= "#{@task.description}" %></h4>
+    <h5><%= "Due: #{@task.completion_date}" %></h5>
   </article>
   <p><a href="/tasks">Back</a></p>
 </main>

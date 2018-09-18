@@ -3,7 +3,7 @@
   <% count = 1 %>
   <% @tasks.each do |task| %>
     <article>
-      <h3><%= "#{count}. " %><a href="/tasks/<%= task[:name] %>"><%= "#{task[:name]}" %></a></h3>
+      <h3><%= "#{count}. " %><a href="/tasks/<%= task.name.delete(" ") %>"><%= "#{task.name}" %></a></h3>
       <sub>
         <a href="/tasks/<%= "/" %>"><%= "Mark Complete" %></a> |
         <a href="/tasks/<%= "/" %>"><%= "Edit" %></a> |
