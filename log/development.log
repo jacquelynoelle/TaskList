@@ -2778,3 +2778,99 @@ Processing by TasksController#index as HTML
 Completed 200 OK in 44ms (Views: 40.2ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/tasks" for 127.0.0.1 at 2018-09-17 21:43:10 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 107ms (Views: 96.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/Weekend%20Warrior" for 127.0.0.1 at 2018-09-17 21:44:01 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"name"=>"Weekend Warrior"}
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 49ms (Views: 40.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-09-17 21:44:03 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 113ms (Views: 107.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/POODR" for 127.0.0.1 at 2018-09-17 22:12:26 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"name"=>"POODR"}
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 106ms (Views: 93.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-09-17 22:12:29 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 62ms (Views: 52.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/POODR" for 127.0.0.1 at 2018-09-17 22:12:31 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"name"=>"POODR"}
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 54ms (Views: 45.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-09-17 22:12:32 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 69ms (Views: 64.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/POODR" for 127.0.0.1 at 2018-09-17 22:12:35 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"name"=>"POODR"}
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 59ms (Views: 55.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-09-17 22:12:37 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 64ms (Views: 60.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/Weekend%20Warrior" for 127.0.0.1 at 2018-09-17 22:12:38 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"name"=>"Weekend Warrior"}
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 53ms (Views: 49.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-09-17 22:12:40 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 78ms (Views: 69.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-09-17 22:12:45 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 38ms (Views: 33.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-09-18 14:25:29 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 529ms (Views: 516.8ms | ActiveRecord: 0.0ms)
+
+
