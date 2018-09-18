@@ -1,0 +1,113 @@
+// Place all the styles related to the Tasks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  background-color: whitesmoke;
+  font-family: Helvetica;
+  color: #3c3c3c;
+  padding: 0rem 2rem;
+  display: grid;
+  grid-template: 1fr 4fr 1fr / 1fr 3fr;
+}
+
+header {
+  grid-column: 1 / 3;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px firebrick solid;
+}
+
+nav {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  justify-content: flex-start;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  margin-top: 2rem;
+  padding: 0rem;
+}
+
+main {
+  padding-top: 2rem;
+}
+
+h1, h2, h3, h4, h5 {
+  margin: 0;
+  line-height: 1.5rem;
+}
+
+h2 {
+  color: firebrick;
+  font-weight: lighter;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-style: italic;
+  padding-bottom: 0.5rem;
+}
+
+h4 {
+  font-weight: lighter;
+}
+
+h5 {
+  font-style: italic;
+  font-weight: bold;
+  margin: 0;
+}
+
+sub {
+  font-style: italic;
+}
+
+article {
+  padding: 0.5rem 0;
+}
+
+a {
+  color: #3c3c3c;
+  text-decoration: none;
+}
+
+sub a {
+  color: grey;
+}
+
+a:hover {
+  color: indianred;
+}
+
+a.button {
+  background-color: none;
+  color: firebrick;
+  border: 1px firebrick solid;
+  text-decoration: none;
+  padding: 0.8rem;
+  border-radius: 25px;
+  text-transform: uppercase;
+  text-align: center;
+  width: 100%;
+}
+
+a.button:hover {
+  background-color: firebrick;
+  color: white;
+}
+
+footer {
+  grid-column: 1 / 3;
+  grid-row: 3 / 4;
+  text-align: right;
+  border-top: 1px firebrick solid;
+  margin-top: 4rem;
+  color: silver;
+}
