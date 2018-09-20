@@ -5,14 +5,14 @@
     <h4><%= "#{@task.description}" %></h4>
     <h5><%= "Due: #{@task.due_date}" %></h5>
   </article>
-  <p>
-    <% if task.completion_date.nil? %>
+  <sub>
+    <% if @task.completion_date.nil? %>
       <% complete_action = "Mark Complete" %>
-    <% else task.completion_date.nil? %>
+    <% else @task.completion_date.nil? %>
       <% complete_action = "Unmark Complete" %>
     <% end <%>
-    <%= link_to complete_action, mark_task_complete_path(task.id), method: :patch %> |
+    <%= link_to complete_action, mark_task_complete_path(@task.id), method: :patch %> |
     <%= link_to "Edit", edit_task_path(@task.id), method: :get %> |
     <%= link_to "Delete", delete_task_path(@task.id), method: :delete, data: {confirm: 'Are you sure?'} %>
-  </p>
+  </sub>
 </main>

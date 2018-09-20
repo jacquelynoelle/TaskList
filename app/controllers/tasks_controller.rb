@@ -14,7 +14,7 @@ require 'date'
 
 class TasksController < ApplicationController
   def index
-    @tasks = Task.all.order(:due_date, :name)
+    @tasks = Task.all.order('completion_date DESC, due_date')
   end
 
   def show
@@ -57,8 +57,8 @@ class TasksController < ApplicationController
 
   def destroy
     id = params[:id]
-    @task = Task.find_by(id: id)
-    if Task.delete(@task)
+    task = Task.find_by(id: id) # does not need @task because does not need a view
+    if Task.delete(task)
       redirect_to root_path # go to the index so we can see the refreshed list
     else # delete failed :(
       render :not_found # show the new task form view again

@@ -111,3 +111,13 @@ footer {
   margin-top: 4rem;
   color: silver;
 }
+
+a.complete {
+  color: silver;
+  text-decoration: line-through;
+}
+
+h3.complete, sub a.complete {
+  color: silver;
+  text-decoration: none;
+}
