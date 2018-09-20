@@ -14,15 +14,65 @@ require 'date'
 
 class TasksController < ApplicationController
   def index
-    @tasks = Task.all.order(:completion_date)
+    @tasks = Task.all.order(:due_date, :name)
   end
 
   def show
-    name = params[:name]
-    @task = Task.find_by(name: name)
+    id = params[:id]
+    @task = Task.find_by(id: id)
 
     if @task.nil?
       render :notfound, status: :not_found
     end
+  end
+
+  def create
+    @task = Task.new(name: params[:task][:name], description: params[:task][:description], due_date: Date.parse(params[:task][:due_date]).to_s) #instantiate a new book
+    if @task.save # save returns true if the database insert succeeds
+      redirect_to root_path # go to the index so we can see the task in the list
+    else # save failed :(
+      render :new # show the new task form view again
+    end
+  end
+
+  def new
+    @task = Task.new
+  end
+
+  def edit
+    id = params[:id]
+    @task = Task.find_by(id: id)
+  end
+
+  def update
+    id = params[:id]
+    @task = Task.find_by(id: id)
+    @task.update(name: params[:task][:name], description: params[:task][:description], due_date: Date.parse(params[:task][:due_date]).to_s)
+    if @task.save # save returns true if the database insert succeeds
+      redirect_to task_path # go to the task detail page so we can see the updates
+    else # save failed :(
+      render :new # show the new task form view again
+    end
+  end
+
+  def destroy
+    id = params[:id]
+    @task = Task.find_by(id: id)
+    if Task.delete(@task)
+      redirect_to root_path # go to the index so we can see the refreshed list
+    else # delete failed :(
+      render :not_found # show the new task form view again
+    end
+  end
+
+  def complete
+    id = params[:id]
+    @task = Task.find_by(id: id)
+    if @task.completion_date == nil
+      @task.update(completion_date: Date.today.to_s)
+    else
+      @task.update(completion_date: nil)
+    end
+    redirect_to root_path # go to the task detail page so we can see the updates
   end
 end
