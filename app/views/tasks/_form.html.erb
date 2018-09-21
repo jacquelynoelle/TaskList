@@ -1,4 +1,6 @@
 <%= form_with model: @task, class: "form" do |f| %>
+  <h1><%= form_title %></h1>
+  <p><%= form_sub %></p>
   <p>
     <%= f.label :name, "Name:" %>
     <%= f.text_field :name %>

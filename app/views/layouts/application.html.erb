@@ -15,8 +15,8 @@
     </header>
     <nav>
       <ul>
-        <li><a href="/tasks" class="button">All Tasks</a></li>
-        <li><a href="<%= new_task_path %>" class="button">Add Task</a></li>
+        <li><%= link_to "All Tasks", tasks_path, class: "button" %></li>
+        <li><%= link_to "Add Task", new_task_path, class: "button" %></li>
       </ul>
     </nav>
     <%= yield %>

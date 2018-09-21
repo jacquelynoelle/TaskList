@@ -8,8 +8,6 @@
 #   { name: "Optional: Ada Zoo", description: "Complete assignment", completion_date: "2018-10-01" }
 # ]
 
-WEEK = "2018-09-24"
-
 require 'date'
 
 class TasksController < ApplicationController
@@ -27,7 +25,7 @@ class TasksController < ApplicationController
   end
 
   def create
-    @task = Task.new(name: params[:task][:name], description: params[:task][:description], due_date: Date.parse(params[:task][:due_date]).to_s) #instantiate a new book
+    @task = Task.new(task_params) #instantiate a new book
     if @task.save # save returns true if the database insert succeeds
       redirect_to root_path # go to the index so we can see the task in the list
     else # save failed :(
@@ -47,7 +45,7 @@ class TasksController < ApplicationController
   def update
     id = params[:id]
     @task = Task.find_by(id: id)
-    @task.update(name: params[:task][:name], description: params[:task][:description], due_date: Date.parse(params[:task][:due_date]).to_s)
+    @task.update(task_params)
     if @task.save # save returns true if the database insert succeeds
       redirect_to task_path # go to the task detail page so we can see the updates
     else # save failed :(
@@ -75,4 +73,10 @@ class TasksController < ApplicationController
     end
     redirect_to root_path # go to the task detail page so we can see the updates
   end
+
+  private
+
+    def task_params
+      return params.require(:task).permit(:name, :description, :due_date, :completion_date)
+    end
 end

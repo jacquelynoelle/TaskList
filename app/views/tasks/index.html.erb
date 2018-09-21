@@ -16,7 +16,7 @@
       <sub>
         <%= link_to complete_action, mark_task_complete_path(task.id), method: :patch, class: "#{status}" %> |
         <%= link_to "Edit", edit_task_path(task.id), method: :get, class: "#{status}" %> |
-        <%= link_to "Delete", delete_task_path(task.id), method: :delete, class: "#{status}", data: {confirm: 'Are you sure?'} %>
+        <%= link_to "Delete", task_path(task.id), method: :delete, class: "#{status}", data: {confirm: 'Are you sure?'} %>
       </sub>
     </article>
     <% count += 1 %>

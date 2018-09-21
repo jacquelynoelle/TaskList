@@ -1,5 +1,3 @@
 <main>
-  <h1>Add a new task</h1>
-  <p>Enter the following information to add a task to the to-do list:</p>
-  <%= render "tasks/form" %>
+  <%= render partial: "form", locals: {form_title: "Add a new task", form_sub: "Enter the following information to add a task to the to-do list:"} %>
 </main>

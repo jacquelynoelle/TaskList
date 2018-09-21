@@ -1,5 +1,4 @@
 <main>
-  <h1>Edit <%= "#{@task.name}" %></h1>
-  <p>Modify task details below:</p>
-  <%= render "tasks/form" %>
+  <%= render partial: "form",
+    locals: { form_title: "Edit #{@task.name}", form_sub: "Modify task details below:" } %>
 </main>
