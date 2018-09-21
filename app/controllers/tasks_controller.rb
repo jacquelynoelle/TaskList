@@ -8,8 +8,6 @@
 #   { name: "Optional: Ada Zoo", description: "Complete assignment", completion_date: "2018-10-01" }
 # ]
 
-require 'date'
-
 class TasksController < ApplicationController
   def index
     @tasks = Task.all.order('completion_date DESC, due_date')
